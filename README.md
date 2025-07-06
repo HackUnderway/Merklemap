@@ -101,6 +101,7 @@ sudo docker run -it --rm -v $(pwd)/resultados_merklemap:/app/resultados_merklema
 
 #### Así puedes elegir entre:
 ✔ Usarlo en Python directamente
+
 ✔ O ejecutar el contenedor Docker con todo preconfigurado
 
 #### La herramienta:
