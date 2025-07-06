@@ -75,10 +75,14 @@ python3 merklemap.py
 
 ##### Ingresa el dominio que deseas analizar (ejemplo: example.com)
 
+
 ## 🐳 Uso con Docker
 
+Merklemap incluye un Dockerfile que configura automáticamente el contenedor con Python y todas las dependencias necesarias.
+Esto te permite usar la herramienta **sin instalar nada en tu sistema host.**
+
 ###### 🏗️ Construir la imagen:
-Dentro del repositorio:
+*Dentro del repositorio:*
 
 ```bash
 sudo docker build -t merklemap .
@@ -86,6 +90,18 @@ sudo docker build -t merklemap .
 ```bash
 sudo docker run -it --rm -v $(pwd)/resultados_merklemap:/app/resultados_merklemap merklemap
 ```
+
+📌 **Nota:** Dentro del contenedor Docker ya viene:
+
+- Python 3.12
+
+- Todas las librerías necesarias (requests, selenium, etc.)
+
+- Configuración lista para ejecutar merklemap.py
+
+#### Así puedes elegir entre:
+✔ Usarlo en Python directamente
+✔ O ejecutar el contenedor Docker con todo preconfigurado
 
 #### La herramienta:
 
@@ -107,8 +123,8 @@ sudo docker run -it --rm -v $(pwd)/resultados_merklemap:/app/resultados_merklema
 # DISTRIBUCIONES SOPORTADAS
 |Distribución | Versión verificada | 	¿Soportado? | 	Estado |
 |--------------|--------------------|------|-------|
-|Kali Linux| 2025.1| si| funcionando   |
-|Parrot Security OS| 6.2| si | funcionando   |
+|Kali Linux| 2025.2| si| funcionando   |
+|Parrot Security OS| 6.3| si | funcionando   |
 |Windows| 11 | si | funcionando   |
 |BackBox| 9 | si | funcionando   |
 |Arch Linux| 2024.12.01 | si | funcionando   |
